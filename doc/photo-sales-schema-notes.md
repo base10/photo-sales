@@ -5,10 +5,14 @@
 * Images
   * First pass
     * master file
-      * This will point to an S3 bucket at first, would be nice to have a more general storage mechanism
+      * This will point to an S3 bucket at first, would be nice to have a more
+        general storage mechanism
     * pointers to responsive break point sizes
-      * This will need to be generated on file upload, contingent on pre-degermined size definitions.
-      * I'll put this as a secondary concern, too. To start, I can use the full size file and a cut down / max version, then get it dialed in from there.
+      * This will need to be generated on file upload, contingent on
+        pre-determined size definitions.
+      * I'll put this as a secondary concern, too. To start, I can use the full
+        size file and a cut down / max version, then get it dialed in from
+        there.
     * slug
     * title
     * description
@@ -61,7 +65,8 @@
     * failed
 * addresses
 * User
-  * At least so I can have some sense of user specific controllers and public facing controllers
+  * At least so I can have some sense of user specific controllers and public-
+    facing controllers
 
 ## Secondary
 
@@ -97,16 +102,23 @@
 * Clearance or Mondan for application authorization
 * Administrate as an admin layer
 * Build separate work objects to handle shopping cart pieces.
-  * I _could_ look at using something like Spree here, if only to inform how I'm building
-* Will need something like Paperclip or an SFTP account to upload and process image assets
-  * Will likely be helpful to have some manner of sidecar file that can pull the title and description from EXIF data
+  * I _could_ look at using something like Spree here, if only to inform how I'm
+    building
+* Will need something like Paperclip or an SFTP account to upload and process
+  image assets
+  * Will likely be helpful to have some manner of sidecar file that can pull the
+    title and description from EXIF data
 * Will need something like rmagick to generate the hi dpi image previews
-* I want to be able to shift layouts on desktop and tablet pages depending on orientation of the device and the photograph
-* I am notionally interested in using or looking at http://balderapp.com as a base for the gallery functionality.
-  * Even if I don't use Balder, I think some of the concepts within will be illustrative
+* I want to be able to shift layouts on desktop and tablet pages depending on
+  orientation of the device and the photograph
+* I am notionally interested in using or looking at http://balderapp.com as a base
+  for the gallery functionality.
+  * Even if I don't use Balder, I think some of the concepts within will be
+    illustrative
 * I will want to have transactional email and a mailing list (MailChimp)
 * I want to use Rails JS partials and Russian doll caching as much as practical
-* I would like to use jQuery and possibly back that off to vanilla JavaScript, depending on how performance goes.
+* I would like to use jQuery and possibly back that off to vanilla JavaScript,
+  depending on how performance goes.
 * Postgres for the data store.
 
 ### Testing
@@ -117,8 +129,10 @@
 
 ### Services
 
-* Evaluate using Heroku vs. spinning up a second Digital Ocean server as an app server
-  * Starting with Heroku at a base level seems like it'd be smart, then transfer to DO if it seems like circumstances warrant
+* Evaluate using Heroku vs. spinning up a second Digital Ocean server as an app
+  server
+ * Starting with Heroku at a base level seems like it'd be smart, then transfer
+   to DO if it seems like circumstances warrant
 * Use Skylight for application metrics
   * Free at base level
 * Use Google analytics for sales info
