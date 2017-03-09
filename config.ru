@@ -1,4 +1,5 @@
-require 'rubygems'
-require File.join(File.dirname(__FILE__), 'lib/photo_sales.rb')
+# This file is used by Rack-based servers to start the application.
 
-run PhotoSales
+require_relative 'config/environment'
+
+run Rails.application
