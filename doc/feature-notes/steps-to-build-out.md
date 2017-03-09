@@ -1,15 +1,15 @@
 # Steps to building out the photo sales site
 
 * Be able to see an image on the site
+  * Counts on adding images through the console, pointing to images I've uploaded to a static server
 * Be able to upload images to the site
 * Create a form that sends an email through Mailgun
   * Make sure I can hand-enter charges through Stripe
     * See if I have a way to safely send someone a page in Stripe to checkout
     * My goal is to not have any situation where I'm asking anyone to send me payment details
-    * Use an invoicing service: https://stripe.com/works-with/categories/invoicing
 * Add in operational elements
   * Skylight.io account
-  * Heroku staging and production
+  * Heroku staging and production or Digital Ocean
   * Test deployments
   * Add Google Analytics
 * Create MailChimp mailing list
@@ -30,3 +30,4 @@
     * twitter postings
     * targeted advertising
   * Schema for full-Stripe functionality
+  * Plan future products

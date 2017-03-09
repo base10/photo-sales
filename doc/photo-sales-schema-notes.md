@@ -99,7 +99,7 @@
 ### Architecture / design choices
 
 * Build it as a 12-factor app
-* Clearance or Mondan for application authorization
+* Clearance for application authorization
 * Administrate as an admin layer
 * Build separate work objects to handle shopping cart pieces.
   * I _could_ look at using something like Spree here, if only to inform how I'm
