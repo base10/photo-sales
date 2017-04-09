@@ -1,0 +1,16 @@
+<%= simple_form_for @user do |form| %>
+
+  <% if @user.errors.any? %>
+    <%= pluralize(@user.errors.count, "error") %> prevented your account from being created:
+    <ul>
+      <% @user.errors.full_messages.each do |error_message| %>
+        <li><%= error_message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form.input :name %>
+  <%= form.input :email, require: true %>
+  <%= form.input :password, require: true %>
+  <%= form.button :submit %>
+<% end %>

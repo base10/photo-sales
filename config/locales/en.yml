@@ -6,6 +6,15 @@ en:
       with_weekday:
         "%a %m/%d/%y"
 
+  helpers:
+    submit:
+      user:
+        create: 'Sign up'
+
+  users:
+    create:
+      success: "Your account has been created."
+
   time:
     formats:
       default:

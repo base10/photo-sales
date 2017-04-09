@@ -26,11 +26,13 @@
       * Camera information
     * tagging
 * users
-  * guid (I want to be able to create guest users and convert them later)
+  * guid (follow-up)
+    *  I want to be able to create guest users and convert them later
   * name
   * email
   * `password_digest`
   * admin
+* `guest_users` (follow-up)
 * orders
   * one or more order items
   * user

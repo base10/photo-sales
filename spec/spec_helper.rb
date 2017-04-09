@@ -9,6 +9,9 @@ if ENV.fetch("COVERAGE", false)
   SimpleCov.start "rails"
 end
 
+require "pry-rails"
+require "byebug"
+require "timecop"
 require "webmock/rspec"
 
 # http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration

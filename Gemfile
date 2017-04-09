@@ -29,6 +29,7 @@ gem "sidekiq"
 gem 'bourbon', '5.0.0.beta.7'
 gem 'high_voltage'
 gem 'neat', '~> 1.8.0'
+gem 'bitters'
 gem 'refills', group: [:development, :test]
 
 ## Defaults not in use
