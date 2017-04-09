@@ -25,12 +25,15 @@
       * date/time
       * Camera information
     * tagging
-* customers
+* users
+  * guid (I want to be able to create guest users and convert them later)
+  * name
   * email
-  * provide an opt-in form for joining mailing list
+  * `password_digest`
+  * admin
 * orders
   * one or more order items
-  * customer
+  * user
   * amount (calculated)
   * status
   * subtotal (not sure here)
@@ -49,11 +52,11 @@
   * Can be live or not live
   * Has dimensions
   * Has materials description
-  * Has lot_size (secondary)
+  * Has `lot_size` (secondary)
   * Has a number available (secondary)
   * cost in cents
 * charges
-  * customer
+  * user
   * order
   * amount
   * kind
@@ -63,10 +66,7 @@
     * pending
     * successful
     * failed
-* addresses
-* User
-  * At least so I can have some sense of user specific controllers and public-
-    facing controllers
+* `order_addresses`
 
 ## Secondary
 
