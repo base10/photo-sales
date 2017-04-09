@@ -3,25 +3,37 @@ source "https://rubygems.org"
 ruby "2.4.0"
 
 gem "autoprefixer-rails"
-gem "delayed_job_active_record"
+gem "bcrypt"
 gem "flutie"
-#gem "honeybadger"
 gem "jquery-rails"
+gem "monban"
 gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "puma"
+gem "rack-attack"
 gem "rack-canonical-host"
 gem "rails", "~> 5.1.0.beta1"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
-gem "sidekiq"
 gem "simple_form"
-#gem "skylight"
 gem "sprockets", "4.0.0.beta4"
 gem "sprockets-es6"
 gem "suspenders"
 gem "title"
 gem "uglifier"
+
+gem "redis"
+gem "sidekiq"
+
+gem 'bourbon', '5.0.0.beta.7'
+gem 'high_voltage'
+gem 'neat', '~> 1.8.0'
+gem 'refills', group: [:development, :test]
+
+## Defaults not in use
+#gem "delayed_job_active_record" # Expect to be using sidekiq and redis
+#gem "honeybadger"
+#gem "skylight"
 
 group :development do
   gem "listen"
@@ -60,8 +72,3 @@ group :staging, :production do
   gem "rack-timeout"
   gem "rails_stdout_logging"
 end
-
-gem 'high_voltage'
-gem 'bourbon', '5.0.0.beta.7'
-gem 'neat', '~> 1.8.0'
-gem 'refills', group: [:development, :test]
