@@ -13,7 +13,7 @@ gem "pg"
 gem "puma"
 gem "rack-attack"
 gem "rack-canonical-host"
-gem "rails", "~> 5.1.0.beta1"
+gem "rails", "~> 5.1.1"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
@@ -52,7 +52,7 @@ group :development, :test do
   gem "factory_girl_rails"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.5.2"
+  gem "rspec-rails", "~> 3.6.0"
 end
 
 group :development, :staging do
