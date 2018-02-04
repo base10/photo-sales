@@ -8,12 +8,12 @@ gem "flutie"
 gem "jquery-rails"
 gem "oath"
 gem "oath-generators"
-gem "normalize-rails", "~> 3.0.0"
+gem "normalize-rails"
 gem "pg", "~> 0.21"
 gem "puma"
 gem "rack-attack"
 gem "rack-canonical-host"
-gem "rails", "~> 5.1.1"
+gem "rails", "~> 5.2.0rc1"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
@@ -26,9 +26,9 @@ gem "uglifier"
 gem "redis"
 gem "sidekiq"
 
-gem 'bourbon', '5.0.0.beta.7'
+gem 'bourbon', '5.0.0'
 gem 'high_voltage'
-gem 'neat', '~> 1.8.0'
+gem 'neat', '~> 2.1.0'
 gem 'bitters'
 gem 'refills', group: [:development, :test]
 
@@ -52,7 +52,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.6.0"
+  gem "rspec-rails", "~> 3.7.0"
 end
 
 group :development, :staging do
