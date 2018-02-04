@@ -25,4 +25,11 @@ en:
         "%B %d"
 
   titles:
-    application: Photo-sales
+    application: walls.corpus Photography
+
+  header:
+    title: walls.corpus Photography
+    byline: By Nathan L. Walls
+
+  footer:
+    copyright_html: '©2018 Nathan L. Walls'
