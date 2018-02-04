@@ -3,7 +3,7 @@ ENV["RACK_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 abort("DATABASE_URL environment variable is set") if ENV["DATABASE_URL"]
 
-require "factory_girl_rails"
+require "factory_bot_rails"
 require "rspec/rails"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |file| require file }
@@ -13,7 +13,7 @@ module Features
   include Formulaic::Dsl
 end
 
-Monban.test_mode!
+Oath.test_mode!
 
 RSpec.configure do |config|
   config.include Features, type: :feature
@@ -21,9 +21,9 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.use_transactional_fixtures = false
 
-  config.include Monban::Test::Helpers, type: :feature
+  config.include Oath::Test::Helpers, type: :feature
   config.after :each do
-    Monban.test_reset!
+    Oath.test_reset!
   end
 end
 
