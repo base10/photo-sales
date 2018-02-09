@@ -16,6 +16,12 @@ en:
       user:
         create: 'Sign up'
 
+  account_actions:
+    hello: Hello!
+    sign_in: Sign in
+    sign_out: Sign out
+    sign_up: Sign up
+
   users:
     create:
       success: "Your account has been created."

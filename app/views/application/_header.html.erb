@@ -1,4 +1,6 @@
 <section id="header">
   <h1><%= link_to I18n.t('header.title'), root_path %></h1>
   <p><%= I18n.t('header.byline') %></p>
+
+  <%= render "user_actions" -%>
 </section>

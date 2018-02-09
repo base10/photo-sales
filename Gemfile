@@ -52,6 +52,8 @@ group :development, :test do
   gem "awesome_print"
   #gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
+  gem "capybara"
+  gem "capybara-webkit"
   gem "dotenv-rails"
   gem "factory_bot_rails", "~> 5.0"
   gem "pry-byebug"

@@ -8,24 +8,31 @@ require "rspec/rails"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |file| require file }
 
-module Features
-  # Extend this module in spec/support/features/*.rb
+module SystemHelper
+  # Extend this module in spec/support/system/*.rb
   include Formulaic::Dsl
 end
 
 Oath.test_mode!
 
 RSpec.configure do |config|
-  config.include Features, type: :feature
+  config.include SystemHelper, type: :system
   config.infer_base_class_for_anonymous_controllers = false
   config.infer_spec_type_from_file_location!
   config.use_transactional_fixtures = true
 
-  config.include Oath::Test::Helpers, type: :feature
+  config.include Oath::Test::Helpers, type: :system
   config.after :each do
     Oath.test_reset!
+  end
+
+  config.before(:each, type: :system) do
+    driven_by :rack_test
+  end
+
+  config.before(:each, type: :system, js: true) do
+    driven_by :webkit
   end
 end
 
 ActiveRecord::Migration.maintain_test_schema!
-Capybara.javascript_driver = :webkit
