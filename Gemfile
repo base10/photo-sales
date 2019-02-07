@@ -61,10 +61,10 @@ end
 
 group :test do
   gem "capybara-webkit"
-  #gem "database_cleaner"
   gem "formulaic"
   gem "shoulda-matchers"
   gem "simplecov", require: false
+  gem "timecop"
   gem "webmock"
 end
 
