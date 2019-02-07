@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.5.0"
+ruby "2.6.1"
 
 gem "autoprefixer-rails"
 gem "bcrypt"
@@ -13,11 +13,11 @@ gem "pg", "~> 0.21"
 gem "puma"
 gem "rack-attack"
 gem "rack-canonical-host"
-gem "rails", "~> 5.2.0rc1"
+gem "rails", "~> 6.0.0.beta1"
 gem "recipient_interceptor"
-gem "sass-rails", "~> 5.0"
+gem "sassc-rails"
 gem "simple_form"
-gem "sprockets", "4.0.0.beta6"
+gem "sprockets", "~> 4.0.0.beta8"
 gem "sprockets-es6"
 gem "suspenders"
 gem "title"
@@ -26,9 +26,9 @@ gem "uglifier"
 gem "redis"
 gem "sidekiq"
 
-gem 'bourbon', '5.0.0'
+gem 'bourbon', '5.1.0'
 gem 'high_voltage'
-gem 'neat', '~> 2.1.0'
+gem 'neat'
 gem 'bitters'
 gem 'refills', group: [:development, :test]
 
@@ -46,13 +46,13 @@ end
 
 group :development, :test do
   gem "awesome_print"
-  gem "bullet"
+  #gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.7.0"
+  gem "rspec-rails", "~> 3.8"
 end
 
 group :development, :staging do
@@ -61,12 +61,10 @@ end
 
 group :test do
   gem "capybara-webkit"
-  gem "database_cleaner"
+  #gem "database_cleaner"
   gem "formulaic"
-  gem "launchy"
   gem "shoulda-matchers"
   gem "simplecov", require: false
-  gem "timecop"
   gem "webmock"
 end
 

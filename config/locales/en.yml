@@ -1,4 +1,9 @@
 en:
+  activerecord:
+    attributes:
+      user:
+        password_digest: "Password"
+
   date:
     formats:
       default:
@@ -32,4 +37,4 @@ en:
     byline: By Nathan L. Walls
 
   footer:
-    copyright_html: '©2018 Nathan L. Walls'
+    copyright_html: '©2019 Nathan L. Walls'
