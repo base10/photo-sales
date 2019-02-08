@@ -52,8 +52,7 @@ group :development, :test do
   #gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "dotenv-rails"
-  # FIXME: Revisit. 5.0.0 was presenting issues
-  gem "factory_bot_rails", "~> 4.11"
+  gem "factory_bot_rails", "~> 5.0"
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"
