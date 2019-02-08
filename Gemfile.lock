@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/morsedigital/shoulda-matchers
+  revision: af66bf0301176e12364b0cdafb2776bfa87e3761
+  specs:
+    shoulda-matchers (4.0.0.rc1)
+      activesupport (>= 4.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +63,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    ast (2.4.0)
     autoprefixer-rails (9.4.7)
       execjs
     awesome_print (1.8.0)
@@ -102,13 +110,16 @@ GEM
       railties (>= 3.2, < 6.0)
     erubi (1.8.0)
     execjs (2.7.0)
-    factory_bot (5.0.0)
-      activesupport (>= 4.2.0)
-    factory_bot_rails (5.0.0)
-      factory_bot (~> 5.0.0)
-      railties (>= 4.2.0)
+    factory_bot (4.11.1)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
+      railties (>= 3.0.0)
     ffi (1.9.25)
     flutie (2.1.0)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
     formulaic (0.4.1)
       activesupport
       capybara
@@ -119,6 +130,7 @@ GEM
     high_voltage (3.1.0)
     i18n (1.5.3)
       concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.2)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -153,7 +165,11 @@ GEM
       warden
     oath-generators (1.0.1)
       oath (>= 0.0.12)
+    parallel (1.13.0)
+    parser (2.6.0.0)
+      ast (~> 2.4.0)
     pg (0.21.0)
+    powerpack (0.1.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -204,6 +220,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.20.3, < 2.0)
+    rainbow (3.0.0)
     rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
@@ -230,6 +247,17 @@ GEM
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    rubocop (0.63.1)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.4.0)
+    rubocop-rspec (1.32.0)
+      rubocop (>= 0.60.0)
+    ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
     sass (3.7.3)
@@ -246,8 +274,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    shoulda-matchers (3.1.3)
-      activesupport (>= 4.0.0)
     sidekiq (5.2.5)
       connection_pool (~> 2.2, >= 2.2.2)
       rack (>= 1.5.0)
@@ -292,6 +318,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.4.1)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -321,8 +348,9 @@ DEPENDENCIES
   bundler-audit (>= 0.5.0)
   capybara-webkit
   dotenv-rails
-  factory_bot_rails
+  factory_bot_rails (~> 4.11)
   flutie
+  foreman
   formulaic
   high_voltage
   jquery-rails
@@ -345,8 +373,10 @@ DEPENDENCIES
   redis
   refills
   rspec-rails (~> 3.8)
+  rubocop
+  rubocop-rspec
   sassc-rails
-  shoulda-matchers
+  shoulda-matchers!
   sidekiq
   simple_form
   simplecov

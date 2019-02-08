@@ -39,6 +39,9 @@ gem 'refills', group: [:development, :test]
 
 group :development do
   gem "listen"
+  gem 'foreman', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec'
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
@@ -49,7 +52,8 @@ group :development, :test do
   #gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "dotenv-rails"
-  gem "factory_bot_rails"
+  # FIXME: Revisit. 5.0.0 was presenting issues
+  gem "factory_bot_rails", "~> 4.11"
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.8"
@@ -62,7 +66,8 @@ end
 group :test do
   gem "capybara-webkit"
   gem "formulaic"
-  gem "shoulda-matchers"
+  # FIXME: Until shoulda-matchers are fixed for Rails 6.0
+  gem "shoulda-matchers", git: 'https://github.com/morsedigital/shoulda-matchers'
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
