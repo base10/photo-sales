@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.6.1"
+ruby "2.6.5"
 
 gem "administrate"
 gem "autoprefixer-rails"
@@ -10,11 +10,11 @@ gem "jquery-rails"
 gem "oath"
 gem "oath-generators"
 gem "normalize-rails"
-gem "pg", "~> 0.21"
+gem "pg"
 gem "puma"
 gem "rack-attack"
 gem "rack-canonical-host"
-gem "rails", "~> 6.0.0.rc1"
+gem "rails", "~> 6.0.0"
 gem "recipient_interceptor"
 gem "sassc-rails"
 gem "simple_form"
@@ -27,14 +27,13 @@ gem "uglifier"
 gem "redis"
 gem "sidekiq"
 
-gem 'bourbon', '5.1.0'
+gem 'bourbon'
 gem 'high_voltage'
 gem 'neat'
 gem 'bitters'
 gem 'refills', group: [:development, :test]
 
 ## Defaults not in use
-#gem "delayed_job_active_record" # Expect to be using sidekiq and redis
 #gem "honeybadger"
 #gem "skylight"
 
@@ -58,7 +57,7 @@ group :development, :test do
   gem "factory_bot_rails", "~> 5.0"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.8"
+  gem "rspec-rails", "~> 3.9"
 end
 
 group :development, :staging do
@@ -66,10 +65,10 @@ group :development, :staging do
 end
 
 group :test do
-  gem "capybara-webkit"
   gem "formulaic"
   # FIXME: Until shoulda-matchers are fixed for Rails 6.0
-  gem "shoulda-matchers", git: 'https://github.com/morsedigital/shoulda-matchers'
+  #gem "shoulda-matchers", git: 'https://github.com/morsedigital/shoulda-matchers'
+  gem "shoulda-matchers"
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
