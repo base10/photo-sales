@@ -41,6 +41,8 @@ group :development do
   gem "listen"
   gem 'foreman', require: false
   gem 'rubocop', require: false
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem "spring"
   gem "spring-commands-rspec"
