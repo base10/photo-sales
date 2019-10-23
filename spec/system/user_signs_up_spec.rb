@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "User creates an account" do
+RSpec.describe "User creates an account", type: :system do
   it "happens successfully" do
     visit sign_up_path
 

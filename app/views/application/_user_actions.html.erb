@@ -1,13 +1,15 @@
   <section data-role="user-actions">
-    <% if current_user.logged_in? %>
-      <ul>
-        <li><%= I18n.t("account_actions.hello") %></li>
-        <li><%= link_to I18n.t("account_actions.sign_out"), sign_out_path %></li>
-      <ul>
-    <% else %>
-      <ul>
-        <li><%= link_to I18n.t("account_actions.sign_in"), sign_in_path %></li>
-        <li><%= link_to I18n.t("account_actions.sign_up"), sign_up_path %></li>
-      </ul>
+    <% if !current_page?(sign_up_path) %>
+      <% if current_user.logged_in? %>
+        <ul>
+          <li><%= I18n.t("account_actions.hello") %></li>
+          <li><%= link_to I18n.t("account_actions.sign_out"), sign_out_path %></li>
+        <ul>
+      <% else %>
+        <ul>
+          <li><%= link_to I18n.t("account_actions.sign_in"), sign_in_path %></li>
+          <li><%= link_to I18n.t("account_actions.sign_up"), sign_up_path %></li>
+        </ul>
+      <% end %>
     <% end %>
   </section>
