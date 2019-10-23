@@ -9,8 +9,9 @@ if ENV.fetch("COVERAGE", false)
   SimpleCov.start "rails"
 end
 
-require "pry-rails"
 require "byebug"
+require 'capybara/rspec'
+require "pry-rails"
 require "shoulda-matchers"
 require "timecop"
 require "webmock/rspec"

@@ -36,3 +36,7 @@ RSpec.configure do |config|
 end
 
 ActiveRecord::Migration.maintain_test_schema!
+
+Capybara.default_driver = :selenium_headless
+Capybara.javascript_driver = :selenium_headless
+Capybara.server = :puma, { Silent: true }

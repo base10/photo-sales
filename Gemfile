@@ -52,12 +52,12 @@ group :development, :test do
   #gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "capybara"
-  gem "capybara-webkit"
   gem "dotenv-rails"
   gem "factory_bot_rails", "~> 5.0"
   gem "pry-byebug"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.9"
+  gem "selenium-webdriver"
 end
 
 group :development, :staging do
