@@ -13,14 +13,21 @@ en:
 
   helpers:
     submit:
+      session:
+        create: "Sign in"
       user:
-        create: 'Sign up'
+        create: "Sign up"
 
   account_actions:
-    hello: Hello!
-    sign_in: Sign in
-    sign_out: Sign out
-    sign_up: Sign up
+    hello: "Hello!"
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    sign_up: "Sign up"
+
+  sessions:
+    create:
+      failure: "Sign-in unsuccessful."
+      success: "You are signed in."
 
   users:
     create:

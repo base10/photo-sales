@@ -3,6 +3,7 @@ ENV["RACK_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 abort("DATABASE_URL environment variable is set") if ENV["DATABASE_URL"]
 
+require 'capybara-screenshot/rspec'
 require "factory_bot_rails"
 require "rspec/rails"
 
@@ -31,12 +32,12 @@ RSpec.configure do |config|
   end
 
   config.before(:each, type: :system, js: true) do
-    driven_by :webkit
+    driven_by :selenium_chrome_headless
   end
 end
 
 ActiveRecord::Migration.maintain_test_schema!
-
-Capybara.default_driver = :selenium_headless
-Capybara.javascript_driver = :selenium_headless
+# Capybara.asset_host = "http://localhost:#{ENV.fetch('PORT')}"
+Capybara.asset_host = "http://localhost:3000"
 Capybara.server = :puma, { Silent: true }
+Capybara::Screenshot.autosave_on_failure = false

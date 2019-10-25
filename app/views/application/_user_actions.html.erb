@@ -1,5 +1,5 @@
   <section data-role="user-actions">
-    <% if !current_page?(sign_up_path) %>
+    <% if !current_page?(sign_up_path) && !current_page?(sign_in_path) %>
       <% if current_user.logged_in? %>
         <ul>
           <li><%= I18n.t("account_actions.hello") %></li>
