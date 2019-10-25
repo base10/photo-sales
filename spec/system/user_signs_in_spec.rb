@@ -6,7 +6,7 @@ RSpec.describe "User signs in", type: :system do
 
   context "with an existing account" do
     it "happens successfully" do
-      user = FactoryBot.create(
+      FactoryBot.create(
         :user,
         email: email
       )

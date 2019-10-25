@@ -7,9 +7,9 @@ gem "autoprefixer-rails"
 gem "bcrypt"
 gem "flutie"
 gem "jquery-rails"
+gem "normalize-rails"
 gem "oath"
 gem "oath-generators"
-gem "normalize-rails"
 gem "pg"
 gem "puma"
 gem "rack-attack"
@@ -27,23 +27,23 @@ gem "uglifier"
 gem "redis"
 gem "sidekiq"
 
-gem 'bourbon'
-gem 'high_voltage'
-gem 'neat'
-gem 'bitters'
-gem 'refills', group: [:development, :test]
+gem "bitters"
+gem "bourbon"
+gem "high_voltage"
+gem "neat"
+gem "refills", group: [:development, :test]
 
 ## Defaults not in use
-#gem "honeybadger"
-#gem "skylight"
+# gem "honeybadger"
+# gem "skylight"
 
 group :development do
+  gem "foreman", require: false
   gem "listen"
-  gem 'foreman', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-performance'
-  gem 'rubocop-rails'
-  gem 'rubocop-rspec'
+  gem "rubocop", require: false
+  gem "rubocop-performance"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
@@ -51,7 +51,7 @@ end
 
 group :development, :test do
   gem "awesome_print"
-  #gem "bullet"
+  gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "capybara"
   gem "capybara-screenshot"
@@ -70,8 +70,6 @@ end
 
 group :test do
   gem "formulaic"
-  # FIXME: Until shoulda-matchers are fixed for Rails 6.0
-  #gem "shoulda-matchers", git: 'https://github.com/morsedigital/shoulda-matchers'
   gem "shoulda-matchers"
   gem "simplecov", require: false
   gem "timecop"

@@ -10,7 +10,7 @@ if ENV.fetch("COVERAGE", false)
 end
 
 require "byebug"
-require 'capybara/rspec'
+require "capybara/rspec"
 require "pry-rails"
 require "shoulda-matchers"
 require "timecop"

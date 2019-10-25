@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  namespace :admin do
-      resources :users
+  require "sidekiq/web"
 
-      root to: "users#index"
-    end
-  require 'sidekiq/web'
+  namespace :admin do
+    mount Sidekiq::Web => "/sidekiq"
+    resources :users
+
+    root to: "users#index"
+  end
 
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
@@ -13,9 +15,5 @@ Rails.application.routes.draw do
   get "/sign_in" => "sessions#new"
   get "/sign_out" => "sessions#destroy"
 
-  namespace :admin do
-    mount Sidekiq::Web => '/sidekiq'
-  end
-
-  #root "/pages/home.html"
+  # root "/pages/home.html"
 end

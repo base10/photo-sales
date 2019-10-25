@@ -1,13 +1,15 @@
 ENV["RACK_ENV"] = "test"
 
-require File.expand_path("../../config/environment", __FILE__)
+require File.expand_path("../config/environment", __dir__)
 abort("DATABASE_URL environment variable is set") if ENV["DATABASE_URL"]
 
-require 'capybara-screenshot/rspec'
+require "capybara-screenshot/rspec"
 require "factory_bot_rails"
 require "rspec/rails"
 
-Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |file| require file }
+Dir[
+  Rails.root.join("spec", "support", "**", "*.rb")
+].sort.each { |file| require file }
 
 module SystemHelper
   # Extend this module in spec/support/system/*.rb
