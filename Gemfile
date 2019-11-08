@@ -61,6 +61,7 @@ group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.9"
   gem "selenium-webdriver"
+  gem "shoulda-matchers"
   gem "webdrivers"
 end
 
@@ -70,7 +71,6 @@ end
 
 group :test do
   gem "formulaic"
-  gem "shoulda-matchers"
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"

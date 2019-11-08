@@ -38,8 +38,14 @@ RSpec.configure do |config|
   end
 end
 
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
 ActiveRecord::Migration.maintain_test_schema!
-# Capybara.asset_host = "http://localhost:#{ENV.fetch('PORT')}"
-Capybara.asset_host = "http://localhost:3000"
+Capybara.asset_host = "http://localhost:#{ENV.fetch('PORT')}"
 Capybara.server = :puma, { Silent: true }
 Capybara::Screenshot.autosave_on_failure = false
