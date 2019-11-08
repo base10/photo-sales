@@ -1,2 +1,2 @@
 web: bundle exec puma -p $PORT -C ./config/puma.rb
-sidekiq: bundle exec sidekiq -L log/sidekiq.log
+sidekiq: bundle exec bundle exec sidekiq 2>&1 | logger -t sidekiq
