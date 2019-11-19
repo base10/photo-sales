@@ -41,7 +41,7 @@ class PhotosController < ApplicationController
       :geoprivacy,
       :latitude,
       :longitude,
-      :shutter_speed
+      :shutter_speed,
       :aperture
     ).merge(user: current_user)
   end
