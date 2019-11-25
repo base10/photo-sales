@@ -25,6 +25,7 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.include Oath::Test::Helpers, type: :system
+
   config.after :each do
     Oath.test_reset!
   end

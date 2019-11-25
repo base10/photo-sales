@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+  before_action :require_login #, only: [:new, :create, :edit, :update, :delete]
+
   def new
     @photo = Photo.new
   end

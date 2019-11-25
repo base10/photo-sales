@@ -6,3 +6,12 @@
 #     https: false
 #   )
 # end
+
+
+class ApplicationController < ActionController::Base
+  include Oath::ControllerHelpers
+
+  def current_user
+    super || GuestUser.new
+  end
+end

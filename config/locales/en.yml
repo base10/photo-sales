@@ -51,6 +51,7 @@ en:
 
   account_actions:
     hello: "Hello!"
+    sign_in_notice: "Sorry, you must be logged in."
     sign_in: "Sign in"
     sign_out: "Sign out"
     sign_up: "Sign up"
