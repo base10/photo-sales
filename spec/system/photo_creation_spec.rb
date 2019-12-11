@@ -23,8 +23,6 @@ RSpec.describe "Photo Creation", type: :system do
         expect(page).to have_notice(
           I18n.t("account_actions.sign_in_notice")
         )
-
-        expect(page).to have_http_status(:unauthorized)
       end
     end
   end
