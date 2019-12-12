@@ -28,5 +28,10 @@ RSpec.describe "Photo Creation", type: :system do
   end
 
   describe "adding a photo" do
+    # Define the photo params
+    # Fill the form
+      # Build a form object
+    # Expect to have a successful submission
+    # Should have one successful and one failing option
   end
 end
