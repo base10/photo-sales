@@ -28,6 +28,11 @@ gem "uglifier"
 gem "redis"
 gem "sidekiq"
 
+gem "rack-mini-profiler"
+gem "flamegraph"
+gem "memory_profiler"
+gem "stackprof"
+
 ## Defaults not in use
 # gem "honeybadger"
 # gem "skylight"
@@ -46,6 +51,7 @@ end
 
 group :development, :test do
   gem "awesome_print"
+  gem "benchmark-ips", '~> 2.7.2'
   gem "bullet"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "capybara"
@@ -57,6 +63,7 @@ group :development, :test do
   gem "rspec-rails", "~> 4.0"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
+  gem "test-prof"
   gem "webdrivers"
 end
 
