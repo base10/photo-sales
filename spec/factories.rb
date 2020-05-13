@@ -1,12 +1,16 @@
 FactoryBot.define do
+  sequence(:unique_email) { |n| "user#{n}@example.com" }
+  sequence :unique_file_name do |num|
+    "IMG_#{num}.jpg"
+  end
+  sequence(:unique_name) { |n| "user #{n}" }
+
   factory :photo do
     slug { "great_photo" }
     title { "A Great Photo" }
     description { "This is a description." }
-    sequence :file_name do |num|
-      "IMG_#{num}.jpg"
-    end
     copyright_year { "2019-01-01" }
+    file_name { generate(:unique_file_name) }
     geoprivacy { true }
     latitude { "35.787743" }
     longitude { "-78.644257" }
@@ -26,15 +30,14 @@ FactoryBot.define do
           )
         ),
         content_type: "image/jpeg",
-        filename: "test.jpg"
+        filename: photo.file_name
       )
     end
   end
 
   factory :user, class: User do
-    sequence(:email) { |n| "user#{n}@example.com" }
-    sequence(:name) { |n| "user #{n}" }
-
+    email { generate(:unique_email) }
+    name { generate(:unique_name) }
     password_digest { "password" }
   end
 

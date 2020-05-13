@@ -20,4 +20,8 @@ class PhotoForm
   ]
 
   attr_accessor(*ATTRIBUTES)
+
+  validates :slug, presence: true
+  validates :title, presence: true
+  validates :user_id, presence: true
 end
