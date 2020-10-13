@@ -56,6 +56,12 @@ en:
     sign_out: "Sign out"
     sign_up: "Sign up"
 
+  photos:
+    new:
+      title: Upload a new photo
+    edit:
+      title: Update an existing photo
+
   sessions:
     create:
       failure: "Sign-in unsuccessful."

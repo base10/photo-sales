@@ -1,3 +1,5 @@
-<h1>Hi!</h1>
+<h1><%= I18n.t("photos.new.title") %></h1>
 
-<p>This is the first page of photos</p>
+<%= render partial: 'form', photo: @photo %>
+
+<p>Below the form</p>

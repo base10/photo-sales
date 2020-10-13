@@ -1,0 +1,15 @@
+<%= simple_form_for @photo do |form| %>
+  <%= form.input :slug %>
+  <%= form.input :title %>
+  <%= form.input :description %>
+  <%= form.input :copyright_year %>
+  <%= form.input :geoprivacy, as: :radio_buttons %>
+  <%= form.input :latitude %>
+  <%= form.input :longitude %>
+  <%= form.input :shutter_speed %>
+  <%= form.input :aperture %>
+
+  <!-- File input -->
+
+  <%= form.button :submit %>
+<% end %>
