@@ -6,6 +6,7 @@ gem "administrate"
 gem "autoprefixer-rails"
 gem "bcrypt"
 gem "flutie"
+gem "high_voltage"
 gem "jquery-rails"
 gem "normalize-rails"
 gem "oath"
@@ -26,12 +27,6 @@ gem "uglifier"
 
 gem "redis"
 gem "sidekiq"
-
-gem "bitters"
-gem "bourbon"
-gem "high_voltage"
-gem "neat"
-gem "refills", group: [:development, :test]
 
 ## Defaults not in use
 # gem "honeybadger"
