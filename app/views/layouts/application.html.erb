@@ -10,6 +10,7 @@
     https://github.com/calebthompson/title#usage
   %>
   <title><%= title %></title>
+  <link href="https://unpkg.com/m-@1.2.4/dist/min.css" rel="stylesheet">
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
@@ -19,6 +20,7 @@
 
   <%= yield %>
   <%= render "footer" %>
+  <script src="https://unpkg.com/m-@1.2.4/dist/min.js" defer></script>
   <%= render "javascript" %>
   <%= render "css_overrides" %>
 </body>
